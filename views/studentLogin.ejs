@@ -1,0 +1,25 @@
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+    
+    <div class="container">
+        <h1>Sign in</h1>
+        <%- include('./partials/msg.ejs')  %> 
+        <form action="/user/student/login" method="POST">
+            <div class="row">
+                <div class="input-field col s6">
+                  <input  id="email" type="email" name="email" class="validate">
+                  <label for="email">Email Address</label>
+                </div>
+                <div class="input-field col s6">
+                  <input id="password" type="password" name="password" class="validate">
+                  <label for="password">password</label>
+                </div>
+              </div>
+              <button class="btn">Sign in</button>
+              <br><br> <a href="/user/student/register">create user profile</a>
+        </form>
+    </div>
+
+    <%- include('./partials/footer.ejs') %> 
+</html>

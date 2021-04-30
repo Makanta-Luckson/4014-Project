@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %>
+</head>
+<body>
+
+    <div class="container">
+        <div class="jumbotron">
+            <div class="jumbotron">
+                
+            </div>
+            <h1>Welcome <%=user.title %> <%=user.lastname %>  </h1>
+            <h3>Department of <%=user.department %> </h3>
+        </div>
+        <nav>
+            <div class="nav-wrapper">
+              <a href="" class="brand-logo">Join chat room</a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="">Approve courses</a></li>
+                <li><a href="/user/admin/addcourse">Add course <span class="new badge"></span></a></li>
+                <li><a href="/user/admin/logout">Logout</a></li>
+              </ul>
+            </div>
+          </nav>
+           
+            <div class="courses">
+              <h3>Available courses</h3>
+                <ul>
+                      <% if (courses.length < 1) { %> 
+                          <p> <em>There are no available courses right now</em> </p>
+                      <% } else {%> %>
+                         <% courses.forEach(course => { %> 
+
+                            <% if (course.identity == user._id) {%> 
+                              <a href="/user/admin/course/<%= course._id %> "> <h5><%= course.coursename %>  ( <%= course.coursecode %> )</h5></a>
+                            
+                            <% } %> 
+                           
+
+                         <% }) %> 
+
+                      <% } %> 
+                </ul>
+            </div>
+           
+         
+    </div>
+    
+    <%- include('./partials/footer.ejs') %> 
+</html>

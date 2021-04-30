@@ -1,0 +1,32 @@
+{
+  "name": "4014-project",
+  "version": "1.0.0",
+  "description": "University Of Zambia course clearance platform",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Makanta-Luckson/4014-Project.git"
+  },
+  "author": "Makanta Luckson, Jackson Mwanaumo, Mwelwa Nkhata, Wezi Munthali, Mukuka Mary",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Makanta-Luckson/4014-Project/issues"
+  },
+  "homepage": "https://github.com/Makanta-Luckson/4014-Project#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.12.2",
+    "nodemailer": "^6.5.0",
+    "nodemon": "^2.0.7",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
+  }
+}

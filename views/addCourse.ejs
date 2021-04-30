@@ -1,0 +1,20 @@
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+    
+    <div class="container">
+        <h1>Add courses that you lecture only</h1>
+        <%- include('./partials/msg.ejs') %>
+        <form action="/user/admin/addcourse" method="POST">
+       <label for="coursename">Full course name</label>
+       <input type="text" name="coursename">
+       <label for="coursecode">Full course name</label>
+       <input type="text" name="coursecode">
+       <button class="btn"> Add</button>
+        </form>
+    </div>
+
+
+
+    <%- include('./partials/footer.ejs') %> 
+</html>

@@ -1,0 +1,28 @@
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+    <div class="container">
+    <h3>Course options</h3>
+            <ul>
+                <li><h5> Course name : <%= course.coursename %></h5></li>
+                <li><h5> Course code : <%= course.coursecode %></h5></li>
+            </ul>
+     
+     <button id="delet" class="btn" data-doc="<%= course._id %> ">Delete</button>
+    </div>
+
+    <script>
+          const button = document.getElementById('delet');
+
+          button.addEventListener('click', (e) => {
+              const endPoint = `/user/admin/course/${button.dataset.doc}`;
+              fetch(endPoint, {
+                  method : 'DELETE'
+              })
+              .then(response => response.json())
+              .then(data => {  window.location.href = data.redirect;})
+              .catch(err => console.log(err));
+          })
+    </script>
+    <%- include('./partials/footer.ejs') %> 
+</html>

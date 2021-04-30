@@ -1,0 +1,84 @@
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+    
+<div class="container">
+    <h1>Create a user account</h1>
+           <%- include('./partials/msg.ejs')  %> 
+     <form action="/user/admin/register" method="POST">
+          
+        <div class="title">
+           
+           <p>Choose your title</p>
+                <label>
+                  <input name="title" type="radio" value="Dr"  /> 
+                  <span>Dr</span> 
+                </label>
+             
+                <label>
+                  <input name="title" type="radio" value="Mr" />
+                  <span>Mr</span>
+                </label>
+              
+                <label>
+                  <input class="with-gap" name="title" type="radio" value="Mrs" />
+                  <span>Mrs</span>
+                </label>
+             
+                <label>
+                    <input class="with-gap" name="title" type="radio" value="Ms" />
+                    <span>Ms</span>
+                  </label>
+          
+        </div><br>
+        
+
+        <div class="row">
+            
+            <div class="col 12">
+                <label for="firstname">First Name</label>
+                <input type="text" name="firstname">        
+            </div>    
+         </div>
+         <div class="row">
+            <div class="col 12">
+                <label for="last">Last Name</label>
+                <input type="text" name="lastname">        
+            </div>    
+         </div>
+        
+         <div class="row">
+            <div class="col 12">
+                <label for="email">Email</label>
+                <input type="email" name="email">        
+            </div>    
+         </div>
+         <p>Choose Department</p>
+         <select name="department" class="browser-default">
+           <option value="Library and Information Science">Library and Information Science</option>
+           <option value="Language and Social Science">Language and Social Science</option>
+           <option value="Religious and Ethics">Religious and Ethics</option>
+           </select><br>
+         <div class="row">
+            <div class="col 12">
+                <label for="password">password</label>
+                <input type="password" name="password">        
+            </div>    
+         </div>
+         <div class="row">
+            <div class="col 12">
+                <label for="password2">Re-enter password</label>
+                <input type="password" name="password2">        
+            </div>    
+         </div>
+         
+          <button class="btn">Create</button> <a href="/user/admin/login">Sign in</a>
+     </form>
+     
+
+   </div>
+
+
+
+<%- include('./partials/footer.ejs') %> 
+</html>

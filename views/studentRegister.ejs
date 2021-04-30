@@ -1,0 +1,83 @@
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+    
+<div class="container">
+    <h1>Create a student user account</h1>
+           <%- include('./partials/msg.ejs')  %> 
+     <form action="/user/student/register" method="POST">      
+
+        <div class="row">
+            
+            <div class="col 12">
+                <label for="firstname">First Name</label>
+                <input type="text" name="firstname">        
+            </div>    
+         </div>
+         <div class="row">
+            <div class="col 12">
+                <label for="last">Last Name</label>
+                <input type="text" name="lastname">        
+            </div>    
+         </div>
+         <div class="gender">
+            Choose your gender
+            <p>
+                <label>
+                  <input name="sex" value="Male" type="radio"/>
+                  <span>Male</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input name="sex" value="Female" type="radio" />
+                  <span>Female</span>
+                </label>
+              </p>
+         </div><br>
+         <div class="row">
+            <div class="col 12">
+                <label for="number">Computer Number</label>
+                <input type="text" name="number">        
+            </div>    
+         </div>
+        
+         <div class="row">
+            <div class="col 12">
+                <label for="email">School Email Address</label>
+                <input type="email" name="email">        
+            </div>    
+         </div>
+         <p>Choose Year of study</p>
+         <select name="year" class="browser-default">
+           <option value="1st Year">1st Year</option>
+           <option value="2nd Year">2nd year</option>
+           <option value="3rd">3rd Year</option>
+           <option value="4th Year">4th Year</option>
+           <option value="5th Year">5th year</option>
+           <option value="6th">6th Year</option>
+           <option value="7th">7th Year</option>
+           </select><br>
+         <div class="row">
+            <div class="col 12">
+                <label for="password">password</label>
+                <input type="password" name="password">        
+            </div>    
+         </div>
+         <div class="row">
+            <div class="col 12">
+                <label for="password2">Re-enter password</label>
+                <input type="password" name="password2">        
+            </div>    
+         </div>
+         
+          <button class="btn">Create</button> <a href="/user/student/login">Sign in</a>
+     </form>
+     
+
+   </div>
+
+
+
+<%- include('./partials/footer.ejs') %> 
+</html>
